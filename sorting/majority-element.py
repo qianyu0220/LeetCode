@@ -3,4 +3,5 @@ class Solution:
         if len(nums) == 0:
             return [] 
         nums.sort()
-        return nums[len(nums) // 2 + 1]
+        n = len(nums)
+        return nums[n // 2 + 1]
