@@ -4,4 +4,4 @@ class Solution:
             return [] 
         nums.sort()
         n = len(nums)
-        return nums[n // 2 + 1]
+        return nums[n // 2]
