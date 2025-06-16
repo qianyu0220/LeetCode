@@ -1,8 +1,4 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         nums.sort()
-        n = len(nums)
-        result = n // 2
-        return nums[result]
-
-        
+        return nums[len(nums) // 2 + 1]
