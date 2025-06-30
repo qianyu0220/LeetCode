@@ -6,3 +6,4 @@ class Solution:
             if mins[i] != maxs[i]:
                 return mins[:i]
         return mins
+        
