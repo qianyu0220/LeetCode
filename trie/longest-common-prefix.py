@@ -7,6 +7,7 @@ class Solution:
             if mins[i] != maxs[i]:
                 output = mins[0:i]
                 return output
-            elif mins[0] != maxs[0]:
-                return ""
+        if not strs:
+            return ""
+
 
