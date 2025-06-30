@@ -5,9 +5,6 @@ class Solution:
         output = ""
         for i in range(len(mins)):
             if mins[i] != maxs[i]:
-                output = mins[0:i]
-                return output
-        if not strs:
-            return ""
+                return mins[:i]
 
 
