@@ -4,4 +4,4 @@ class Solution:
         for char in s.lower():
             if char.isdigit() or char.isalpha():
                 tmp += char
-        return tmp == tmp[:-1:-1]
+        return tmp == tmp[::-1]
