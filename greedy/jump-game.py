@@ -4,5 +4,5 @@ class Solution:
         for i in range(len(nums)):
             if i > maxReach:
                 return False
-            maxReach = max(i + nums[i], maxReach)
+            maxReach = max(maxReach, i + nums[i])
         return True
