@@ -3,12 +3,12 @@ class Solution:
         maxReach = 0
         step = 0
         current = 0
-        for i in range(len(nums)-1):
-            maxReach = max(i+nums[i], maxReach)
+
+        for i in range(len(nums) - 1):
+            maxReach = max(maxReach, i + nums[i])
             if current == i:
                 step += 1
                 current = maxReach
             elif current > len(nums) - 1:
                 break
         return step
-            
