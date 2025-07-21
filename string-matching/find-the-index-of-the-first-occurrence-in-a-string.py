@@ -5,7 +5,7 @@ class Solution:
 
         if len_needle > len_haystack:
             return -1
-        for i in range(len_needle):
+        for i in range(len_haystack):
             if haystack[i:i+len_needle] == needle:
                 return i
         return -1
