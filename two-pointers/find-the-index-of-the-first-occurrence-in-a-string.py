@@ -8,4 +8,4 @@ class Solution:
         for i in range(len_needle):
             if haystack[i:i+len_needle] == needle:
                 return i
-        return -1
+            return -1
