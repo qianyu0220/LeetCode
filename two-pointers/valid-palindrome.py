@@ -1,6 +1,6 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        tmp = ""
+        tmp = ''
         for char in s.lower():
             if char.isdigit() or char.isalpha():
                 tmp += char
