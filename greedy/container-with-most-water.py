@@ -4,13 +4,9 @@ class Solution:
         max_water = 0
 
         while left < right:
-            if height[left] < height[right]:
+            max_water = max(max_water, (min(height[left], height[right])) * (right - left))
+            if height[left] <= height[right]: 
                 left += 1
-                max_water = max(max_water, (min(height[left], height[right]) * (right - left)))
             elif height[left] > height[right]: 
-                right -= 1
-                max_water = max(max_water, (min(height[left], height[right]) * (right - left)))
-            else:
-                max_water = max(max_water, (height[left]) * (right - left))
-                left += 1
-            return max_water
+                right -= 1               
+        return max_water
