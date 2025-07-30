@@ -12,4 +12,5 @@ class Solution:
                 max_water = max(max_water, (min(height[left], height[right]) * (right - left)))
             else:
                 max_water = max(max_water, (height[left]) * (right - left))
+                left += 1
             return max_water
