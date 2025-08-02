@@ -17,4 +17,6 @@ class Solution:
                 else:
                     output.append([nums[i], nums[j],nums[k]])
                     j += 1
+                    while j < k and nums[j] == nums[j-1]:
+                        j += 1
         return output
