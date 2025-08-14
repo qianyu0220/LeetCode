@@ -13,4 +13,3 @@ class Solution:
             fast_pointer = fast_pointer.next.next
             if slow_pointer == fast_pointer:
                 return True
-        return False
