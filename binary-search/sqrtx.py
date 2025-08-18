@@ -3,7 +3,7 @@ class Solution:
         if x == 0:
             return 0
         left, right = 1, x
-        while left < right:
+        while left <= right:
             mid = (left + right) // 2
             if mid * mid == x:
                 return mid
@@ -11,4 +11,4 @@ class Solution:
                 left = mid + 1
             elif mid * mid > x:
                 right = mid - 1
-        return mid
+        return right
