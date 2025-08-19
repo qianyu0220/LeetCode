@@ -9,10 +9,11 @@ class Solution:
         while i < len(starts):
             if starts[i] < ends[j]:
                 rooms += 1
-                max_room = max(max_room, rooms)
+                
                 i += 1
             else:
                 rooms -= 1
                 j += 1
+            max_room = max(max_room, rooms)
         return max_room
             
