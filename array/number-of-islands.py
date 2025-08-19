@@ -14,6 +14,6 @@ class Solution:
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == '1':
-                    num_islands += 1
                     dfs(i, j)
+                    num_islands += 1
         return num_islands
