@@ -11,7 +11,7 @@ class Solution:
             cur = queue.popleft()
             result.append(cur)
 
-            for nxt in range(numCourses):
+            for nxt in graph[cur]:
                 indegree[nxt] -= 1
                 if indegree[nxt] == 0:
                     queue.append(nxt)
