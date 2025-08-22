@@ -3,7 +3,7 @@ class Solution:
         if not grid:
             return 0
         def dfs(i, j):
-            if i<0 or i>=len(grid) or j<0 or j>=len(grid[0]) or grid[i][j]=="0":
+            if i<0 or i>=len(grid) or j<0 or j>=len(grid[0]) or grid[i][j]!="1":
                 return
             grid[i][j] = "0"
             dfs(i+1, j)
