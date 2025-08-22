@@ -14,4 +14,4 @@ class Solution:
                 indegree[nxt] -= 1
                 if indegree[nxt] == 0:
                     queue.append(nxt)
-        return result
+        return result if len(result) == numCourses else[]
