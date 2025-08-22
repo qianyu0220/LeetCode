@@ -12,5 +12,6 @@ class Solution:
             count += 1
             for nxt in graph[cur]:
                 indegree[nxt] -= 1
-                queue.append(nxt)
+                if indegree[nxt] == 0:
+                    queue.append(nxt)
         return count == numCourses
