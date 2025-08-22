@@ -10,9 +10,8 @@ class Solution:
         while queue:
             cur = queue.popleft()
             result.append(cur)
-
             for nxt in graph[cur]:
                 indegree[nxt] -= 1
                 if indegree[nxt] == 0:
                     queue.append(nxt)
-        return result if len(result) == numCourses else []
+        return result
