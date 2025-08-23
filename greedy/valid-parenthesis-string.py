@@ -8,10 +8,9 @@ class Solution:
             elif c == ")":
                 low -= 1
                 high -= 1
-            elif c == "*":
+            else:
                 low -= 1
                 high += 1
             if high < 0:
                 return False
-            low = max(low, 0)
-        return low == 0
+        return True if low <= 0 else False
