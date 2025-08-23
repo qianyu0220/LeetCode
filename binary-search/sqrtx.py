@@ -4,7 +4,7 @@ class Solution:
         right = x
         if x == 0:
             return 0
-        while left < right:
+        while left <= right:
             mid = (left+right) // 2
             if mid * mid == x:
                 return mid
