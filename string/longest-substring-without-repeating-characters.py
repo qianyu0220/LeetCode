@@ -4,6 +4,8 @@ class Solution:
         left = 0
         char_set = set()
         output = 1
+        if not s:
+            return 0
         for right in range(n):
             while s[right] in char_set:
                 char_set.remove(s[left])
