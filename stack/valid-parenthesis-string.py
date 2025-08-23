@@ -13,4 +13,5 @@ class Solution:
                 high += 1
             if high < 0:
                 return False
-        return True if low <= 0 else False
+            low = max(low,0)
+        return low == 0
