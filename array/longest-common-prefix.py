@@ -6,5 +6,5 @@ class Solution:
         for i in range(len(mins)):
             if mins[i] != maxs[i]:
                 return mins[:i]
-        #return mins
+        return ""
 
