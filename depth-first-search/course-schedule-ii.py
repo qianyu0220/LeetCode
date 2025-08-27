@@ -5,13 +5,14 @@ class Solution:
         for a, b in prerequisites:
             graph[b].append(a)
             indegree[a] += 1
-        queue = deque([i for i in range(numCourses) if indegree[i] == 0])
-        result = []
+        queue = deque([i for i in range(numCourses) if indegree[i]==0])
+        output = []
         while queue:
             cur = queue.popleft()
-            result.append(cur)
+            output.append(cur)
             for nxt in graph[cur]:
                 indegree[nxt] -= 1
                 if indegree[nxt] == 0:
                     queue.append(nxt)
-        return result if len(result) == numCourses else[]
+
+        return output
