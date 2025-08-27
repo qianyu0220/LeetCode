@@ -16,5 +16,5 @@ class Solution:
                 if grid[i][j] == 1:
                     dfs(i, j)
                     area += 1
-                    max_area = max(max_area, area)
+                max_area = max(max_area, area)
         return max_area
