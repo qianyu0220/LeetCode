@@ -11,7 +11,6 @@ class Solution:
             if inorder:
                 idx = inorder.index(preorder.popleft())
                 root = TreeNode(inorder[idx])
-
                 root.left = build(preorder, inorder[:idx])
                 root.right = build(preorder, inorder[idx+1:])
                 return root
