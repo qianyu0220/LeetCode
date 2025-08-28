@@ -8,4 +8,4 @@ class Solution:
                 output += mins[i]
             else:
                 break
-        return output 
+        return output
