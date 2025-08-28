@@ -12,6 +12,7 @@ class Solution:
                 elif grid[i][j] == 2:
                     queue.append((i, j, 0))
         directions = [(1,0), (-1,0), (0,1), (0,-1)]
+        minutes = 0
         while queue:
             r, c, minutes = queue.popleft()
             for dr, dc in directions:
