@@ -6,5 +6,6 @@ class Solution:
         for i in range(1, n):
             for j in range(i):
                 if prices[i] - prices[j] > 0:
-                    best_bene = max(best_bene, prices[i]-prices[j])
+                    cur_bene = prices[i]-prices[j]
+                    best_bene = max(best_bene, cur_bene)
         return best_bene
