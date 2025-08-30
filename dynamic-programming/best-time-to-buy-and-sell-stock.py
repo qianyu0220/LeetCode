@@ -1,9 +1,10 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        buy_price = prices[0]
-        benefit = 0
-        for i in range(len(prices)):
-            if prices[i] < buy_price:
-                buy_price = prices[i]
-            benefit = max(benefit, prices[i]-buy_price)
-        return benefit
+        cur_bene = prices[0]
+        best_bene = 0
+        n = len(prices)
+        for i in range(1, n):
+            for j in range(i):
+                if prices[i] - prices[j] > 0:
+                    best_bene = max(best_bene, prices[i]-prices[j])
+        return best_bene
