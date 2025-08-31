@@ -5,5 +5,4 @@ class Solution:
             left >>= 1
             right >>= 1
             count += 1
-        result = left << count
-        return result
+        return left << count
