@@ -11,5 +11,7 @@ class Solution:
                 return True
             elif not node1 or not node2:
                 return False
-            return check(node1.left, node2.right) and check(node1.right, node2.left)
+            if node1.val == node2.val:
+
+                return check(node1.left, node2.right) and check(node1.right, node2.left)
         return check(root, root)
