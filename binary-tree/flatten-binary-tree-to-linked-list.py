@@ -10,14 +10,13 @@ class Solution:
         Do not return anything, modify root in-place instead.
         """
         if not root:
-            return None
+            return root
         self.flatten(root.left)
         self.flatten(root.right)
         if root.left:
             temp = root.right
             root.right = root.left
             root.left = None
-
             cur = root.right
             while cur.right:
                 cur = cur.right
