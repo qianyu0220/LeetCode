@@ -7,7 +7,6 @@
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
         postorder = deque(postorder)
-
         def build(inorder):
             if inorder:
                 idx = inorder.index(postorder.pop())
@@ -16,5 +15,3 @@ class Solution:
                 root.left = build(inorder[:idx])
                 return root
         return build(inorder)
-
-        
