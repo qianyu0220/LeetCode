@@ -8,3 +8,6 @@ class Solution:
                 return i + 1
         if target > nums[-1]:
             return n
+
+        else:
+            return 0
