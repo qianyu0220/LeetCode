@@ -3,8 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        n = len(nums)
+        n = len(nums) 
         k = k % n
+        output = []
         nums.reverse()
         nums[:k] = reversed(nums[:k])
         nums[k:] = reversed(nums[k:])
