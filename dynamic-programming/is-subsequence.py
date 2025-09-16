@@ -16,6 +16,8 @@ class Solution:
         p = 0
         if not t:
             return False
+        if not s:
+            return False
         for i in range(n):
             if t[i] == s[p]:
                 p += 1
