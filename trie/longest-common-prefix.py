@@ -6,4 +6,4 @@ class Solution:
         for i in range(len(minx)):
             if minx[i] != maxs[i]:
                 return minx[:i]
-        return ""
+        return minx
