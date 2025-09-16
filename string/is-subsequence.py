@@ -14,11 +14,8 @@ class Solution:
         m = len(s)
         n = len(t)
         p = 0
-        if not t:
-            return False
-        if not s:
-            return False
-        for i in range(n):
-            if t[i] == s[p]:
-                p += 1
-        return p == m
+        while p < m:
+            for i in range(n):
+                if t[i] == s[p]:
+                    p += 1
+            return p == m
