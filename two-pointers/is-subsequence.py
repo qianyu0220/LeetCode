@@ -14,7 +14,7 @@ class Solution:
         m = len(s)
         n = len(t)
         p = 0
-        if not s or not t:
+        if not t:
             return False
         for i in range(n):
             if t[i] == s[p]:
