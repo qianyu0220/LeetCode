@@ -9,5 +9,5 @@ class Solution:
                 char_set.remove(s[left])
                 left += 1
             char_set.add(s[right])
-            output = max(output, right-left+1)
+            output = max(output, right - left + 1)
         return output
