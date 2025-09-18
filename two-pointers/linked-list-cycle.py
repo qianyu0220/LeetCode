@@ -6,6 +6,10 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        n = len(head)
-        if n > 0:
-            return True else False
+        slowpoint = head
+        fastpoint = head
+        while fastpoint and fastpoint.next:
+            slowpoint = slowpoint.next
+            fastpoint = fastpoint.next.next
+            if slowpoint == fastpoint:
+                return True
