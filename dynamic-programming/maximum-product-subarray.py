@@ -2,6 +2,8 @@ class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         n = len(nums)
         output = -float("inf")
+        if n == 0:
+            return nums
         for i in range(1, n):
             if nums[i] == 0:
                 continue
