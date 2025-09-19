@@ -9,5 +9,5 @@ class Solution:
                 length = 0
             while num + length in nums_set:
                 length += 1
-                output = max(length, output)
+            output = max(length, output)
         return output
