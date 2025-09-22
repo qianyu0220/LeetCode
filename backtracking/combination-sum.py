@@ -3,7 +3,7 @@ class Solution:
         output = []
         def backtrack(start, path, cur_sum):
             if cur_sum == target:
-                output.append(path)
+                output.append(path[:])
                 return
             if cur_sum > target:
                 return
