@@ -9,7 +9,7 @@ class Solution:
                 return False
             tmp = board[i][j]
             board[i][j] = "#"
-            found = (dfs(i+1, j, index+1) or dfs(i, j+1, index+1) or dfs(i, j+1, index+1) or dfs(i, j-1, index+1))
+            found = (dfs(i+1, j, index+1) or dfs(i-1, j, index+1) or dfs(i, j+1, index+1) or dfs(i, j-1, index+1))
             board[i][j] = tmp
             return found
         for i in range(rows):
