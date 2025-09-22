@@ -3,9 +3,10 @@ class Solution:
         visit = set()
         def sum_of_n(n):
             output = 0
-            digit = n % 10
-            output += digit ** 2
-            n = n // 10
+            while n:
+                digit = n % 10
+                output += digit ** 2
+                n = n // 10
             return output
         while n not in visit:
             visit.add(n)
