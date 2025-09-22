@@ -9,7 +9,7 @@ class Solution:
                 return
             for i in range(start, len(candidates)):
                 path.append(candidates[i])
-                backtrack(i, path, cur_sum + candidats[i])
+                backtrack(i, path, cur_sum + candidates[i])
                 path.pop()
         backtrack(0, [], 0)
         return output
