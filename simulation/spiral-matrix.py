@@ -3,9 +3,9 @@ class Solution:
         m = len(matrix)
         n = len(matrix[0])
         output = []
-        top, bottom = 0, m-1
         left, right = 0, n-1
-        while top <= bottom and left <= right:
+        top, bottom = 0, m-1
+        while left <= right and top <= bottom:
             for i in range(left, right+1):
                 output.append(matrix[top][i])
             top += 1
