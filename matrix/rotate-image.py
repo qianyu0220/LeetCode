@@ -3,10 +3,15 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        # n = len(matrix)
+        # for i in range(n):
+        #     for j in range(i+1, n):
+        #         matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        # for row in matrix:
+        #     row.reverse()
         n = len(matrix)
         for i in range(n):
             for j in range(i+1, n):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-        
-        for row in matrix:
-            row.reverse()
+        for rows in matrix:
+            rows.reverse()
