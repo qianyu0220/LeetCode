@@ -6,4 +6,5 @@ class Solution:
                 element = board[i][j]
                 if element != ".":
                     result += [(i, element), (element, j), (i // 3, j // 3, element)]
+
         return len(result) == len(set(result))
