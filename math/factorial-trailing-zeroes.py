@@ -4,5 +4,5 @@ class Solution:
         i = 5
         while i <= n:
             n = n // 5
-            fives += 1
+            fives += n
         return fives
