@@ -4,5 +4,4 @@ class Solution:
         m = collections.Counter(magazine)
         if r & m == r:
             return True
-        else:
-            return False
+        return False
