@@ -3,6 +3,6 @@ class Solution:
         fives = 0
         i = 5
         while i <= n:
-            fives += n//i 
-            i *= 5
+            n = n // 5
+            fives += 1
         return fives
