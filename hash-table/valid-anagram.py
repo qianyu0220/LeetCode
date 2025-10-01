@@ -1,5 +1,5 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        s = sorted(s)
-        t = sorted(t)
-        return True if s == t else False
+        s_sort = sorted(s)
+        t_sort = sorted(t)
+        return s_sort == t_sort
