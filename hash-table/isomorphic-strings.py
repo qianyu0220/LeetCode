@@ -1,10 +1,7 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         s_to_t, t_to_s = {}, {}
-        m = len(s)
-        n = len(t)
-        if m != n:
-            return False
+        n = len(s)
         for char_s, char_t in zip(s, t):
             if char_s in s_to_t:
                 if s_to_t[char_s] != char_t:
