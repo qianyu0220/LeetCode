@@ -17,5 +17,5 @@ class Solution:
                         else:
                             result.append(int(l) * int(r))
         if not result:
-            return [int(expression)]
+            result.append(int(expression))
         return result
