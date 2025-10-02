@@ -8,15 +8,14 @@ class Solution:
                 sub2 = expression[i+1:]
                 s1 = self.diffWaysToCompute(sub1)
                 s2 = self.diffWaysToCompute(sub2)
-                for i in s1:
-                    for j in s2:
+                for l in s1:
+                    for r in s2:
                         if oper == "+":
-                            result.append(int(i) + int(j))
+                            result.append(int(l) + int(r))
                         elif oper == "-":
-                            result.append(int(i) - int(j))
+                            result.append(int(l) - int(r))
                         else:
-                            result.append(int(i) * int(j))
-        if len(result) == 0:
-            result.append(int(expression))
-
+                            result.append(int(l) * int(r))
+        if not result:
+            return [int(expression)]
         return result
