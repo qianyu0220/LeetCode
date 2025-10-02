@@ -11,7 +11,7 @@ class Solution:
                 for i in s1:
                     for j in s2:
                         if oper == "+":
-                            result.append(int(i) * int(j))
+                            result.append(int(i) + int(j))
                         elif oper == "-":
                             result.append(int(i) - int(j))
                         else:
