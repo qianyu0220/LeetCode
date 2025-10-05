@@ -1,12 +1,12 @@
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         S = sum(nums)
-        n = len(nums)
-        sum_P = (target +S) // 2
-        if  (S+target) %2 != 0 or S < target:
+        if (S + target) % 2 != 0 or abs(target) > S:
             return 0
-        dp = [0] * (n+1)
-        dp[0] = 0
-        for i in range(1, n+1):
-            for num in nums:
-                dp[i] += dp[i-num]
+        P = (S + target) // 2
+        dp = [0] * (P+1)
+        dp[0] = 1
+        for num in nums:
+            for i in range(P, num-1, -1):
+                dp[i] += dp[i - num]
+        return dp[P]
