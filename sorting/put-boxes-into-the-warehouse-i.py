@@ -1,10 +1,11 @@
 class Solution:
     def maxBoxesInWarehouse(self, boxes: List[int], warehouse: List[int]) -> int:
         boxes.sort()
-        for i in range(1, len(warehouse)):
+        n = len(warehouse)
+        output = 0
+        for i in range(1, n):
             warehouse[i] = min(warehouse[i], warehouse[i-1])
-        i = 0
-        for j in range(len(warehouse)-1, -1, -1):
-            if i < len(boxes) and boxes[i] <= warehouse[j]:
-                i += 1
-        return i
+        for j in range(n-1, -1, -1):
+            if output < len(boxes) and boxes[output] <= warehouse[j]:
+                output += 1
+        return output
