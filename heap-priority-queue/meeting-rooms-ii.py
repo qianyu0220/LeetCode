@@ -12,4 +12,4 @@ class Solution:
             else:
                 rooms -= 1
                 j += 1
-        return rooms
+        return max_rooms
