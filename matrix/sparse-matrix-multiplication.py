@@ -1,7 +1,7 @@
 class Solution:
     def multiply(self, mat1: List[List[int]], mat2: List[List[int]]) -> List[List[int]]:
         m = len(mat1)
-        k = len(mat1[0])
+        n = len(mat1[0])
         p = len(mat2[0])
         if not mat1 or not mat2 or not mat1[0] or not mat2[0]:
             return []
