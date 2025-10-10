@@ -30,5 +30,5 @@ class Solution:
                 if not B_rows[k]:
                     continue
                 for j, b in B_rows[k].items():
-                    C[i][j] = a * b
+                    C[i][j] += a * b
         return C
