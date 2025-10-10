@@ -1,10 +1,11 @@
 class Solution:
     def multiply(self, mat1: List[List[int]], mat2: List[List[int]]) -> List[List[int]]:
+        if not mat1 or not mat2 or not mat1[0] or not mat2[0]:
+            return []
         m = len(mat1)
         n = len(mat1[0])
         p = len(mat2[0])
-        if not mat1 or not mat2 or not mat1[0] or not mat2[0]:
-            return []
+
         A_rows = []
         for i in range(m):
             row_dict = {}
