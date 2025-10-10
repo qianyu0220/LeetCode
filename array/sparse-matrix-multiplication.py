@@ -6,6 +6,8 @@ class Solution:
         n = len(mat1[0])
         p = len(mat2[0])
 
+        if len(mat2) != n:
+            return []
         A_rows = []
         for i in range(m):
             row_dict = {}
@@ -14,17 +16,19 @@ class Solution:
                     row_dict[k] = val
             A_rows.append(row_dict)
         B_rows = []
-        for i in range(p):
+        for i in range(n):
             row_dict = {}
-            for j, val in enumerate(mat2[i]):
+            for k, val in enumerate(mat2[i]):
                 if val != 0:
-                    row_dict[j] = val
+                    row_dict[k] = val
             B_rows.append(row_dict)
+
         C = [[0] * p for _ in range(m)]
+
         for i in range(m):
             for k, a in A_rows[i].items():
                 if not B_rows[k]:
                     continue
                 for j, b in B_rows[k].items():
-                    C[i][j] += a*b
+                    C[i][j] = a * b
         return C
