@@ -3,7 +3,7 @@ class Solution:
         nums.sort()
         n = len(nums)
         if n == 1:
-            return nums[0] - 1
+            return 1
         for i in range(1, n):
             if nums[i] - 1 != nums[i-1]:
                 return nums[i] - 1
