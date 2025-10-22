@@ -8,5 +8,5 @@ class Solution:
                 window.remove(s[left])
                 left += 1
             window.add(char)
-            output = max(output, right - left + 1)
+            output = max(output, right-left+1)
         return output
