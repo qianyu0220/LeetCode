@@ -13,5 +13,5 @@ class Solution:
                 while s[right] in set(s[left:right]):
                     left += 1
                     length = right - left + 1
-                output = max(output, length)
+            output = max(output, length)
         return output
