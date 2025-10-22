@@ -5,7 +5,7 @@ class Solution:
         output = 0
         length = 0
         if not s:
-            return 1
+            return 0
         for left in range(n):
             for right in range(left+1, n):
                 while s[right] in set(s[left:right]):
