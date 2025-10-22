@@ -12,6 +12,6 @@ class Solution:
             for right in range(left+1, n):
                 while s[right] in set(s[left:right]):
                     left += 1
-                    length = right - left + 1
+                length = right - left + 1
                 output = max(output, length)
         return output
