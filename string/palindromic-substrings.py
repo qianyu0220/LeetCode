@@ -1,6 +1,12 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
         n = len(s)
+        s_set = set(s)
+        output = 0
+        if len(s_set) == 1:
+            for i in range(n):
+                output += i+1
+            return output 
         def expand(l, r):
             while l>=0 and r<n and s[l] == s[r]:
                 l -= 1
