@@ -9,9 +9,8 @@ class Solution:
         slowpoint = head
         fastpoint = head
         while fastpoint and fastpoint.next:
-            fastpoint = fastpoint.next.next
             slowpoint = slowpoint.next
-            if fastpoint == slowpoint:
+            fastpoint = fastpoint.next.next
+            if slowpoint == fastpoint:
                 return True
-
         return False
