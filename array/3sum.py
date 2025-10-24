@@ -14,7 +14,7 @@ class Solution:
                     output.append([nums[i], nums[k], nums[j]])
                     k += 1
                     while k < j and nums[k] == nums[k-1]:
-                        continue
+                        k += 1
                 elif total < 0:
                     k += 1
                 else:
