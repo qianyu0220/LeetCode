@@ -4,14 +4,14 @@ class Solution:
         n = len(heights[0])
         directions = [(0,1), (0,-1), (1,0), (-1,0)]
         def dfs(i, j, visited):
-            visited.add((i, j))
+            visited.add((i,j))
             for dx, dy in directions:
-                x = i + dx
-                y = j + dy
+                x = i+dx
+                y = j+dy
                 if 0<=x<m and 0<=y<n:
                     if (x, y) not in visited and heights[x][y] >= heights[i][j]:
-                        dfs(x,y,visited)
-        pacific = set()
+                        dfs(x, y, visited)
+        pacific= set()
         atlantic = set()
         for i in range(m):
             dfs(i, 0, pacific)
