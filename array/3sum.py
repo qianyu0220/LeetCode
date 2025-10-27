@@ -6,8 +6,8 @@ class Solution:
         for i in range(n):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
-            k, j = i+1, n-1
-            while k < j:
+            k, j = i + 1, n-1
+            while k<j:
                 total = nums[i] + nums[k] + nums[j]
                 if total > 0:
                     j -= 1
@@ -16,6 +16,6 @@ class Solution:
                 else:
                     output.append([nums[i], nums[k], nums[j]])
                     k += 1
-                    while k < j and nums[k] == nums[k-1]:
+                    while k<j and nums[k] == nums[k-1]:
                         k += 1
-        return output 
+        return output
