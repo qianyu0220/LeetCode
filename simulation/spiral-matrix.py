@@ -14,12 +14,14 @@ class Solution:
             for i in range(top, bottom+1):
                 output.append(matrix[i][right])
             right -= 1
+            if left > right:
+                break
             for i in range(right, left-1, -1):
                 output.append(matrix[bottom][i])
             bottom -= 1
+            if top > bottom:
+                break
             for i in range(bottom, top-1, -1):
                 output.append(matrix[i][left])
             left += 1          
-            if left>right:
-                break
         return output
