@@ -4,8 +4,8 @@ class Solution:
         n = len(needle)
         if haystack == needle:
             return 0
-        for i in range(h):
-            for j in range(i, h):
+        for i in range(h+1):
+            for j in range(i+1, h+1):
                 if haystack[i:j] == needle:
                     return i
         return -1
