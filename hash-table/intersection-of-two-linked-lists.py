@@ -13,4 +13,4 @@ class Solution:
         while point1!=point2:
             point1 = point1.next if point1 else headB 
             point2 = point2.next if point2 else headA
-        return point1
+        return point2
