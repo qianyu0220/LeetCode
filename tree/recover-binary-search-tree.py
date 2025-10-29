@@ -12,7 +12,7 @@ class Solution:
         self.first = self.second = self.prev = None
         def inorder(node):
             if not node:
-                return
+                return 
             inorder(node.left)
             if self.prev and self.prev.val > node.val:
                 if not self.first:
