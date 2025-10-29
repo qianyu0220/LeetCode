@@ -5,7 +5,7 @@ class Solution:
         if haystack == needle:
             return 0
         for i in range(h):
-            for j in range(i+1, h):
+            for j in range(i, h):
                 if haystack[i:j] == needle:
                     return i
         return -1
