@@ -3,4 +3,4 @@ class Solution:
         nums.sort()
         n = len(nums)
         mid = n // 2
-        return nums[mid+1]
+        return nums[mid]
