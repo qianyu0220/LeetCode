@@ -1,7 +1,7 @@
 class Solution:
     def isNumber(self, s: str) -> bool:
         isdot, ise, nums = False, False, False
-        for index, c in enumerate(s):
+        for i, c in enumerate(s):
             if c.isdigit():
                 nums = True
             elif c in "+-":
