@@ -8,7 +8,7 @@ class Solution:
                 if i > 0 and s[i-1] not in "eE":
                     return False
             elif c in "eE":
-                if ise and not nums:
+                if ise or not nums:
                     return False
                 ise = True
                 nums = False
