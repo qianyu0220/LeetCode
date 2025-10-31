@@ -1,5 +1,6 @@
 class Solution:
     def isNumber(self, s: str) -> bool:
+        s = s.strip()
         isdot, ise, nums = False, False, False
         for i, c in enumerate(s):
             if c.isdigit():
