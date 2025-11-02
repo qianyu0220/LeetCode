@@ -22,5 +22,9 @@ class Solution:
                 right_val = -1
             if mat[max_row][mid] > left_val and mat[max_row][mid] > right_val:
                 return [max_row, mid]
+            elif mat[max_row][mid] < left_val:
+                mid -= 1
+            else:
+                mid += 1
 
 
