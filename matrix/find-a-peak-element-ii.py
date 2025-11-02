@@ -8,7 +8,7 @@ class Solution:
         while left <= right:
             mid = (left+right) // 2
             max_row = 0
-            cur_max = 0
+            cur_max = mat[0][mid]
             for i in range(m):
                 if i > 0 and mat[i][mid] > cur_max:
                     max_row = i
