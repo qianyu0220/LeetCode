@@ -7,7 +7,7 @@ class Solution:
             max_row = 0
             cur_max = 0
             for i in range(m):
-                if i>0 and mat[i][mid] > mat[i-1][mid]:
+                if mat[i][mid] > cur_max:
                     max_row = i
                     cur_max = mat[i][mid]
             left_val = mat[i][mid-1] if mid-1 > 0 else -1
