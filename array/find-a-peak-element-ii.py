@@ -10,8 +10,8 @@ class Solution:
                 if mat[i][mid] > cur_max:
                     max_row = i
                     cur_max = mat[i][mid]
-            left_val = mat[i][mid-1] if mid-1 > 0 else -1
-            right_val = mat[i][mid+1] if mid+1 < n else -1
+            left_val = mat[max_row][mid-1] if mid-1 > 0 else -1
+            right_val = mat[max_row][mid+1] if mid+1 < n else -1
             if mat[max_row][mid] > left_val and mat[max_row][mid] > right_val:
                 return [max_row, mid]
             elif mat[max_row][mid] < left_val:
