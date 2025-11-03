@@ -1,9 +1,10 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        m, n = len(grid), len(grid[0])
+        m = len(grid)
+        n = len(grid[0])
+        directions = [(1,0), (-1,0), (0,1), (0,-1)]
         visited = [[-1] * n for _ in range(m)]
         queue = deque([(0, 0, k, 0)])
-        directions = [(0,1), (0,-1), (1,0), (-1,0)]
         while queue:
             x, y, remain, steps = queue.popleft()
             if x == m-1 and y == n-1:
