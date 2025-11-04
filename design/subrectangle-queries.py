@@ -5,7 +5,7 @@ class SubrectangleQueries:
         self.update = []
 
     def updateSubrectangle(self, row1: int, col1: int, row2: int, col2: int, newValue: int) -> None:
-        self.update.append([row1, col1, row2, col2, newValue])
+        self.update.append((row1, col1, row2, col2, newValue))
 
     def getValue(self, row: int, col: int) -> int:
         for row1, col1, row2, col2, newValue in reversed(self.update):
