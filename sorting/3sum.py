@@ -4,7 +4,7 @@ class Solution:
         n = len(nums)
         output = []
         for i in range(n):
-            if i > 0 and nums[i] == nums[i-1]:
+            if i>0 and nums[i] == nums[i-1]:
                 continue
             k, j = i+1, n-1
             while k < j:
