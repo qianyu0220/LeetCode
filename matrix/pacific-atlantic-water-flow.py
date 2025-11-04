@@ -1,17 +1,15 @@
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         m, n = len(heights), len(heights[0])
-        output = []
-        directions = [(1,0), (-1,0), (0,1), (0,-1)]
+        directions = [(0,1), (0,-1), (1,0), (-1,0)]
         def dfs(i, j, visited):
-            visited.add((i, j))
+            visited.add((i,j))
             for dx, dy in directions:
-                x = i+dx
-                y = j+dy
+                x = i + dx
+                y = j + dy
                 if 0<=x<m and 0<=y<n:
-                    if (x, y) not in visited and heights[x][y] >= heights[i][j]:
+                    if (x,y) not in visited and heights[x][y] >= heights[i][j]:
                         dfs(x, y, visited)
-
         pacific = set()
         atlantic = set()
         for i in range(m):
@@ -22,5 +20,6 @@ class Solution:
             dfs(i, n-1, atlantic)
         for j in range(n):
             dfs(m-1, j, atlantic)
-        return list(pacific&atlantic)
-            
+        return list(pacific & atlantic)
+
+
