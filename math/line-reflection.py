@@ -11,6 +11,6 @@ class Solution:
         for p in points:
             x = p[0]
             y = p[1]
-            if (2*centerX - x, y) not in points_set:
+            if (2 * centerX - x, y) not in points_set:
                 return False
         return True
