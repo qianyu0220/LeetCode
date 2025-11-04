@@ -12,7 +12,7 @@ class Solution:
                 nx, ny = x+dx, y+dy
                 if 0<=nx<m and 0<=ny<n:
                     nk = remain - grid[nx][ny]
-                    if nk>=0 and nk > visited[nx][ny]:
+                    if nk>=0 and nk>visited[nx][ny]:
                         visited[nx][ny] = nk
                         queue.append((nx, ny, nk, steps+1))
         return -1
