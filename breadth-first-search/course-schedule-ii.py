@@ -1,17 +1,33 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        # graph = [[] for _ in range(numCourses)]
+        # indegree = [0] * numCourses
+        # for a, b in prerequisites:
+        #     graph[b].append(a)
+        #     indegree[a] += 1
+        # queue = [i for i in range(numCourses) if indegree[i]==0]
+        # output = []
+        # while queue:
+        #     cur = queue.pop()
+        #     output.append(cur)
+        #     for nxt in graph[cur]:
+        #         indegree[nxt] -= 1
+        #         if indegree[nxt] == 0:
+        #             queue.append(nxt)
+        # return output if len(output) == numCourses else []
         graph = [[] for _ in range(numCourses)]
-        indegree = [0] * numCourses
+        indegrees = [0] * numCourses
         for a, b in prerequisites:
             graph[b].append(a)
-            indegree[a] += 1
-        queue = [i for i in range(numCourses) if indegree[i]==0]
+            indegrees[a] += 1
+        queue = [i for i in range(numCourses) if indegrees[i]==0]
         output = []
         while queue:
             cur = queue.pop()
             output.append(cur)
             for nxt in graph[cur]:
-                indegree[nxt] -= 1
-                if indegree[nxt] == 0:
+                indegrees[nxt] -= 1
+                if indegrees[nxt] == 0:
                     queue.append(nxt)
         return output if len(output) == numCourses else []
+
