@@ -16,18 +16,19 @@ class Solution:
         #             queue.append(nxt)
         # return output if len(output) == numCourses else []
         graph = [[] for _ in range(numCourses)]
-        indegrees = [0] * numCourses
+        indegree = [0] * numCourses
         for a, b in prerequisites:
             graph[b].append(a)
-            indegrees[a] += 1
-        queue = [i for i in range(numCourses) if indegrees[i]==0]
+            indegree[a] += 1
         output = []
+        queue = [i for i in range(numCourses) if indegree[i]==0]
         while queue:
             cur = queue.pop()
             output.append(cur)
             for nxt in graph[cur]:
-                indegrees[nxt] -= 1
-                if indegrees[nxt] == 0:
+                indegree[nxt] -= 1
+                if indegree[nxt] == 0:
                     queue.append(nxt)
         return output if len(output) == numCourses else []
+        
 
