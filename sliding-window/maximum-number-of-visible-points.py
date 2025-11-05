@@ -12,7 +12,7 @@ class Solution:
                 angles.append(math.degrees(math.atan2(dy, dx)))
         angles.sort()
         n = len(angles)
-        angles = [a+360 for a in angles]
+        angles += [a+360 for a in angles]
         max_count = 0
         j = 0
         for i in range(n):
