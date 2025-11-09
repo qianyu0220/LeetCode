@@ -10,15 +10,13 @@ class Solution:
                     j += 1
                 else:
                     return False
-            elif abbr[j].isdigit():
+            else:
                 if abbr[j] == "0":
                     return False
                 num_str = ""
                 while j < n and abbr[j].isdigit():
-                    num_str += abbr[j]
-                    j += 1
+                    if abbr[j].isdigit():
+                        num_str += abbr[j]
+                        j += 1
                 i += int(num_str)
-            else:
-                return False           
         return i == m and j == n
-           
