@@ -15,8 +15,7 @@ class Solution:
                     return False
                 num_str = ""
                 while j < n and abbr[j].isdigit():
-                    if abbr[j].isdigit():
-                        num_str += abbr[j]
-                        j += 1
+                    num_str += abbr[j]
+                    j += 1
                 i += int(num_str)
         return i == m and j == n
