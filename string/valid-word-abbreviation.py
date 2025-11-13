@@ -1,15 +1,15 @@
 class Solution:
     def validWordAbbreviation(self, word: str, abbr: str) -> bool:
-        i = j = 0
         m = len(word)
         n = len(abbr)
+        i = j = 1
         while i < m and j < n:
             if abbr[j].isalpha():
-                if abbr[j] == word[i]:
+                if abbr[j] != word[i]:
+                    return False
+                else:
                     i += 1
                     j += 1
-                else:
-                    return False
             else:
                 if abbr[j] == "0":
                     return False
@@ -19,3 +19,5 @@ class Solution:
                     j += 1
                 i += int(num_str)
         return i == m and j == n
+
+
