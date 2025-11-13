@@ -15,5 +15,5 @@ class Solution:
                 return is_palindrome(left + 1, right) or is_palindrome(left, right - 1)
             left += 1
             right -= 1
-            return True
+        return True
             
