@@ -4,14 +4,8 @@ class Solution:
         m = len(text1)
         n = len(text2)
         output = 0
-        while p1 < m and p2 < n:
-            if text1[p1] == text2[p2]:
-                output += 1
-                p1 += 1
-                p2 += 1
-            elif m > n:
-                p1 += 1
-            else:
-                p2 += 1
+        for i in range(m):
+            for j in range(n):
+                if text1[i] == text2[j]:
+                    output += 1
         return output
-
