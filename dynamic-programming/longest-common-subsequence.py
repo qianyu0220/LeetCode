@@ -9,7 +9,9 @@ class Solution:
                 output += 1
                 p1 += 1
                 p2 += 1
-            else:
+            elif m > n:
                 p1 += 1
+            else:
+                p2 += 1
         return output
 
