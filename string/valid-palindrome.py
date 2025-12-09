@@ -5,4 +5,3 @@ class Solution:
             if char.isdigit() or char.isalpha():
                 output += char
         return output == output[::-1]
-        
