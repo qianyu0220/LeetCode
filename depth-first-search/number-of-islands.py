@@ -4,7 +4,7 @@ class Solution:
         n = len(grid[0])
         output = 0
         def dfs(i, j):
-            if i<0 or i>=m or j<0 or j>=n or grid[i][j]!="1":
+            if i < 0 or i >= m or j < 0 or j >= n or grid[i][j] != "1":
                 return
             grid[i][j] = "0"
             dfs(i+1, j)
