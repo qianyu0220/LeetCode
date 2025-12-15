@@ -3,9 +3,7 @@ class Solution:
         cur_sum = sum(nums[:k])
         output = cur_sum / k
         n = len(nums)
-
         for i in range(k, n):
             cur_sum = cur_sum - nums[i-k] + nums[i]
-            if cur_sum / k > output:
-                output = cur_sum / k
+            output = max(output, cur_sum / k)
         return output
