@@ -7,4 +7,4 @@ class Solution:
         area1 = (ax2 - ax1) * (ay2 - ay1)
         area2 = (bx2 - bx1) * (by2 - by1)
 
-        return (area1 + area2) - (x[1] - x[2]) * (y[1] - y[2])
+        return (area1 + area2) - (x[2] - x[1]) * (y[2] - y[1])
