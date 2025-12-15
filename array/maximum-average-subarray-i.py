@@ -6,6 +6,6 @@ class Solution:
 
         for i in range(k, n):
             cur_sum = cur_sum - nums[i-k] + nums[i]
-            if cur_sum / 4 > output:
-                output = cur_sum / 4
+            if cur_sum / k > output:
+                output = cur_sum / k
         return output
