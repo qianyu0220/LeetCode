@@ -7,8 +7,9 @@ class Solution:
         for right in range(n):
             cur_sum += nums[right]
             while (right - left + 1) - cur_sum > k:
-                output = max(output, right - left)
+                
                 cur_sum -= nums[left]
                 left += 1
+            output = max(output, right - left + 1)
                 
         return output
