@@ -4,7 +4,7 @@ class Solution:
         y = [ay1, ay2, by1, by2]
         x.sort()
         y.sort()
-        area1 = (ax1 - ax2) * (ay1 - ay2)
-        area2 = (bx1 - bx2) * (by1 - by2)
+        area1 = (ax2 - ax1) * (ay2 - ay1)
+        area2 = (bx2 - bx1) * (by2 - by1)
 
         return (area1 + area2) - (x[1] - x[2]) * (y[1] - y[2])
