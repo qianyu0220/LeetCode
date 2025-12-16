@@ -12,4 +12,3 @@ class Solution:
             if count[char] < 0:
                 return False
         return True
-            
