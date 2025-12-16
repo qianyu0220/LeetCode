@@ -3,9 +3,9 @@ class Solution:
         area1 = (ax2 - ax1) * (ay2 - ay1)
         area2 = (bx2 - bx1) * (by2 - by1)
 
-        overlap_w = max(0, min(ax2, bx2) - max(bx1, ax1))
-        overlap_h = max(0, min(ay2, by2) - max(by1, ay1))
+        overlap_w = max(0, min(ax2, bx2) - max(ax1, bx1))
+        overlap_h = max(0, min(ay2, by2) - max(ay1, by1))
 
-        rec = overlap_w * overlap_h
+        overlap_area = overlap_w * overlap_h
 
-        return area1 + area2 - rec
+        return area1 + area2 - overlap_area
