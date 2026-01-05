@@ -1,9 +1,23 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
-        m = len(edges)
-        output = 1
-        edges.sort(key=lambda x: x[0])
-        for i in range(m):
-            if i>0 and edges[i][0] != edges[i-1][1]:
-                output += 1
-        return output
+        graph = [[] for _ in range(n)]
+        for u, v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
+        visited = [False] * n
+
+        def dfs(start):
+            stack = [start]
+            while stack:
+                node = stack.pop()
+                for nei in graph[node]:
+                    if not visited[nei]:
+                        visited[nei] = True
+                        stack.append(nei)
+        count = 0
+        for i in range(n):
+            if not visited[i]:
+                visited[i] = True
+                dfs(i)
+                count += 1
+        return count
