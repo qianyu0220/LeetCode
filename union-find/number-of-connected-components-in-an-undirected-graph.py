@@ -6,6 +6,4 @@ class Solution:
         for i in range(m):
             if i>0 and edges[i][0] != edges[i-1][1]:
                 output += 1
-            if i>0 and edges[i][1] == edges[i-1][1]:
-                output -= 1
         return output
