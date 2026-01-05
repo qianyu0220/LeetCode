@@ -4,10 +4,10 @@ class Solution:
         for u, v in edges:
             graph[u].append(v)
             graph[v].append(u)
+        
         visited = [False] * n
-
-        def dfs(start):
-            stack = [start]
+        def dfs(i):
+            stack = [i]
             while stack:
                 node = stack.pop()
                 for nei in graph[node]:
