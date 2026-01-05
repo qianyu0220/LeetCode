@@ -4,7 +4,6 @@ class Solution:
         for u, v in edges:
             graph[u].append(v)
             graph[v].append(u)
-        
         visited = [False] * n
         def dfs(i):
             stack = [i]
