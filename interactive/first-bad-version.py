@@ -3,10 +3,12 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        output = float("inf")
-        for i in range(n):
-            if isBadVersion(i):
-                output = min(output, i)
-            elif i+1 == n:
-                return n
-        return output
+        first, last = 1, n
+        while first < last:
+            mid = (first + last) // 2
+
+            if isBadVersion(mid):
+                last = mid
+            else:
+                first = mid + 1
+        return first
