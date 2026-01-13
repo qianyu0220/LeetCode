@@ -7,4 +7,6 @@ class Solution:
         for i in range(n):
             if isBadVersion(i):
                 output = min(output, i)
+            elif i+1 == n:
+                return n
         return output
