@@ -5,4 +5,5 @@ class Solution:
             complement = target - i
             if complement in hashmap:
                 return [index, hashmap[complement]]
-            hashmap[i] = index
+            else:
+                hashmap[i] = index
