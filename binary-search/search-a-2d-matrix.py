@@ -4,7 +4,7 @@ class Solution:
         left, right = 0, m*n-1
         while left <= right:
             mid = (left + right) // 2
-            val = matrix[mid // n][mid % n]
+            val = matrix[mid // n][mid // m]
             if val == target:
                 return True
             elif val < target:
