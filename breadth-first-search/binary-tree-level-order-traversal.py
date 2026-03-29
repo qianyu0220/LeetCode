@@ -10,9 +10,10 @@ class Solution:
             return []
         result = []
         queue = deque([root])
+
         while queue:
-            level_size = len(queue)
             level = []
+            level_size = len(queue)
             for _ in range(level_size):
                 node = queue.popleft()
                 level.append(node.val)
