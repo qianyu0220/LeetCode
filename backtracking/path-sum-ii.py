@@ -10,7 +10,7 @@ class Solution:
         path = []
         def dfs(node, remain):
             if not node:
-                return 
+                return
             path.append(node.val)
             remain -= node.val
 
@@ -18,6 +18,7 @@ class Solution:
                 result.append(path[:])
             dfs(node.left, remain)
             dfs(node.right, remain)
+
             path.pop()
         dfs(root, targetSum)
         return result
