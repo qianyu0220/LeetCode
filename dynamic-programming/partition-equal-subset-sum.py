@@ -8,7 +8,7 @@ class Solution:
         dp[0] = True
 
         for num in nums:
-            for j in range(1, target+1):
+            for j in range(target, num-1, -1):
                 if dp[j-num]:
                     dp[j] = True
         return dp[target]
