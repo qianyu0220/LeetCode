@@ -6,9 +6,8 @@ class Solution:
         target = total // 2
         dp = [False] * (target+1)
         dp[0] = True
-
         for num in nums:
-            for j in range(target, num-1, -1):
-                if dp[j-num]:
-                    dp[j] = True
+            for i in range(target, num-1, -1):
+                if dp[i-num]:
+                    dp[i] = True
         return dp[target]
