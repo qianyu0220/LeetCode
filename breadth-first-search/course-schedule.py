@@ -5,8 +5,7 @@ class Solution:
         for a, b in prerequisites:
             graph[b].append(a)
             indegrees[a] += 1
-
-        queue = deque([i for i in range(numCourses) if indegrees[i] == 0])
+        queue = deque([i for i in range(numCourses) if indegrees[i]==0])
         count = 0
         while queue:
             cur = queue.popleft()
