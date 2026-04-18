@@ -4,11 +4,10 @@ class Solution:
         if total % 2 != 0:
             return False
         target = total // 2
-        n = len(nums)
-        dp = [False] * (target + 1)
+        dp = [False] * (target+1)
         dp[0] = True
         for num in nums:
             for i in range(target, num-1, -1):
                 if dp[i-num]:
                     dp[i] = True
-        return dp[-1]
+        return dp[-1]            
