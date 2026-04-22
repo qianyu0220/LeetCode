@@ -33,7 +33,6 @@ class Solution:
                     if not visited[nei]:
                         visited[nei] = True
                         stack.append(nei)
-
         count = 0
         for i in range(n):
             if not visited[i]:
