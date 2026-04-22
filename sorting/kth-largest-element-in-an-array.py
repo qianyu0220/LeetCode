@@ -11,4 +11,4 @@ class Solution:
             heapq.heappush(heap, num)
             if len(heap) > k:
                 heapq.heappop(heap)
-        return heap[-k]
+        return heap[0]
