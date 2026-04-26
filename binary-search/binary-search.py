@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         left, right = 0, n-1
         output = 0
-        while left < right:
+        while left <= right:
             mid = (left + right) // 2
             if nums[mid] == target:
                 return mid
