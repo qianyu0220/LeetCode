@@ -6,10 +6,9 @@ class Solution:
         while left < right:
             if height[left] < height[right]:
                 water = height[left] * (right - left)
-                left += 1               
+                left += 1
             else:
                 water = height[right] * (right - left)
                 right -= 1
-                
             output = max(output, water)
         return output
