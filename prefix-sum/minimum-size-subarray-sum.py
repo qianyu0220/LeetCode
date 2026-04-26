@@ -4,9 +4,9 @@ class Solution:
         output = float("inf")
         cur_sum = 0
         left = 0
-        for right in range(1, n):
+        for right in range(n):
             cur_sum += nums[right]
-            while cur_sum + nums[right] >= target:
+            while cur_sum >= target:
                 output = min(output, right-left+1)
                 cur_sum -= nums[left]
                 left += 1
