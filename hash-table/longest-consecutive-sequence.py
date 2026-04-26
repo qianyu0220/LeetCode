@@ -10,7 +10,7 @@ class Solution:
         #         output = max(output, length)
         # return output
         n = len(nums)
-        output = 1
+        output = 0
         nums = set(nums)
         for num in nums:
             if num - 1 not in nums:
