@@ -6,15 +6,14 @@ class Solution:
             mid = (left + right) // 2
             if nums[mid] == target:
                 return mid
-            elif nums[mid] > target:
-                if nums[mid] > nums[right]:
+            elif nums[mid] <= nums[right]:
+                if nums[mid] <= target < nums[right]:
                     left = mid + 1
                 else:
                     right = mid - 1
-            elif nums[mid] < target:
-                if nums[mid] < nums[right]:
-                    left = mid + 1
-                else:
+            else:
+                if nums[left] < target <= nums[right]:
                     right = mid - 1
+                else:
+                    left = mid + 1
         return -1
-
