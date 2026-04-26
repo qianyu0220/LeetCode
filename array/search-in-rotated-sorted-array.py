@@ -12,7 +12,7 @@ class Solution:
                 else:
                     right = mid - 1
             else:
-                if nums[left] < target <= nums[right]:
+                if nums[left] < target <= nums[mid]:
                     right = mid - 1
                 else:
                     left = mid + 1
