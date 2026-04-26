@@ -17,5 +17,5 @@ class Solution:
                 length = 0
                 while num + length in nums:
                     length += 1
-            output = max(output, length)
+                output = max(output, length)
         return output
