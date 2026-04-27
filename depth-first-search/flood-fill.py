@@ -1,19 +1,16 @@
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
-        start_color = image[sr][sc]
         m, n = len(image), len(image[0])
-
-        def backtrack(i, j, grid):
-            if i<0 or i>=m or j<0 or j>=n or grid[i][j] != start_color:
+        old_color = image[sr][sc]
+        if old_color == color:
+            return image
+        def dfs(i, j):
+            if i<0 or i>=m or j<0 or j>=n or image[i][j] != old_color:
                 return
-            if grid[i][j] == color:
-                return
-            grid[i][j] = color
-            backtrack(i+1, j, grid)
-            backtrack(i-1, j, grid)
-            backtrack(i, j+1, grid)
-            backtrack(i, j-1, grid)
-
-        backtrack(sr, sc, image)
+            image[i][j] = color
+            dfs(i+1, j)
+            dfs(i-1, j)
+            dfs(i, j+1)
+            dfs(i, j-1)
+        dfs(sr, sc)
         return image
-                
