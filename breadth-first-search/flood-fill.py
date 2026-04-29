@@ -5,7 +5,7 @@ class Solution:
         if old_color == color:
             return image
         def dfs(i, j):
-            if i<0 or i>=m or j<0 or j>=n or image[i][j] != old_color:
+            if i<0 or i>=m or j<0 or j>=n or image[i][j]!=old_color:
                 return
             image[i][j] = color
             dfs(i+1, j)
