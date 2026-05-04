@@ -10,12 +10,10 @@ class Solution:
             for j in range(n):
                 total = 0
                 count = 0
-
-                for di, dj in directions:
-                    x = i + di
-                    y = j + dj
-
-                    if 0 <= x < m and 0 <= y < n:
+                for dx, dy in directions:
+                    x = i + dx
+                    y = j + dy
+                    if 0<=x<m and 0<=y<n:
                         total += img[x][y]
                         count += 1
                 output[i][j] = total // count
