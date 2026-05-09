@@ -1,7 +1,7 @@
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
-        if len(s) < len(p):
-            return [] 
+        if len(p) > len(s):
+            return []
         p_count = [0] * 26
         window = [0] * 26
         result = []
