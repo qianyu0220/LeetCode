@@ -3,9 +3,8 @@ class Solution:
         n = len(prices)
         lowest = prices[0]
         output = 0
-        for index, i in enumerate(prices):
-            if i < lowest:
-                lowest = i
-            output = max(output, i - lowest)
+        for i in range(n):
+            if prices[i] < lowest:
+                lowest = prices[i]
+            output = max(output, prices[i] - lowest)
         return output
-
