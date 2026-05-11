@@ -5,6 +5,5 @@ class Solution:
         for index, i in enumerate(nums):
             complement = target - i
             if complement in hashmap:
-                return [hashmap[complement], index]
-            else:
-                hashmap[i] = index
+                return [index, hashmap[complement]]
+            hashmap[i] = index
