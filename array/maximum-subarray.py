@@ -1,7 +1,7 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         n = len(nums)
-        output = 0
+        output = nums[0]
         cur_sum = 0
         for i in range(n):
             if cur_sum + nums[i] < nums[i]:
