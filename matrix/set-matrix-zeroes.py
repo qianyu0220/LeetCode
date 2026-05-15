@@ -4,17 +4,16 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
         m, n = len(matrix), len(matrix[0])
-        rows = []
-        cols = []
+        row = []
+        col = []
         for i in range(m):
             for j in range(n):
-                if matrix[i][j] == 0:
-                    rows.append(i)
-                    cols.append(j)
-        for i in rows:
+                if matrix[i][j] ==0:
+                    row.append(i)
+                    col.append(j)
+        for i in row:
             for j in range(n):
                 matrix[i][j] = 0
-
         for i in range(m):
-            for j in cols:
+            for j in col:
                 matrix[i][j] = 0
