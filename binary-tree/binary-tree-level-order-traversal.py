@@ -23,7 +23,7 @@ class Solution:
         #     result.append(level)
         # return result
         if not root:
-            return root
+            return []
         output = []
         queue = deque([root])
         while queue:
