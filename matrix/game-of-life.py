@@ -4,7 +4,7 @@ class Solution:
         Do not return anything, modify board in-place instead.
         """
         m, n = len(board), len(board[0])
-        directions = [(-1, -1), (-1, 0), (-1, 1), 
+        directions = [(-1, -1), (-1, 0), (-1, 1),
         (0, -1), (0, 1),
         (1, -1), (1, 0), (1, 1)]
         for i in range(m):
@@ -24,10 +24,7 @@ class Solution:
                         board[i][j] = 3
         for i in range(m):
             for j in range(n):
-                if board[i][j] == 2:
-                    board[i][j] = 0
-                elif board[i][j] == 3:
+                if board[i][j] == 3:
                     board[i][j] = 1
-                
-
-
+                elif board[i][j] == 2:
+                    board[i][j] = 0
