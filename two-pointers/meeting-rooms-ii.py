@@ -7,7 +7,7 @@ class Solution:
         while i < len(starts):
             if starts[i] < ends[j]:
                 room += 1
-                max_room = max(room, room)
+                max_room = max(room, max_room)
                 i += 1
             else:
                 room -= 1
