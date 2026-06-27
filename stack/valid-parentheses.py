@@ -10,7 +10,7 @@ class Solution:
         #             return False
         # return not stack
         stack = []
-        mapping = {")": "(", "]": "[", "}": "{"}
+        mapping = {")": "(", "}": "{", "]": "["}
         for char in s:
             if char in mapping.values():
                 stack.append(char)
