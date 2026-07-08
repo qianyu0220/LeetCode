@@ -1,8 +1,8 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        h = len(haystack)
+        m = len(haystack)
         n = len(needle)
-        for i in range(h):
-            if haystack[i:i+n] == needle:
+        for i in range(m):
+            if haystack[i: i+n] == needle:
                 return i
         return -1
