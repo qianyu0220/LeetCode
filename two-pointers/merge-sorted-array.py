@@ -3,9 +3,8 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        p = 0
-        q = 0
         output = []
+        p, q = 0, 0
         while p < m and q < n:
             if nums1[p] <= nums2[q]:
                 output.append(nums1[p])
@@ -19,7 +18,6 @@ class Solution:
         while q < n:
             output.append(nums2[q])
             q += 1
-            
-        for i in range(m + n):
+        for i in range(m+n):
             nums1[i] = output[i]
         return nums1
